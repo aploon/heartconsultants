@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+import logo from '../assets/logo.png';
+---
+
+<Layout title="Privacy Policy - Heart Consultants">
+  <main class="py-12">
+    <div class="container mx-auto px-5 md:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+          <a href="/">
+            <img src={logo.src} alt="Heart Consultants Logo" class="h-16 w-auto" />
+          </a>
+        </div>
+        
+        <h1 class="text-3xl font-bold mb-8">Privacy Policy</h1>
+        
+        <div class="prose max-w-none">
+          <p class="text-lg mb-6">We are committed to protecting your privacy and providing a safe online experience. This Privacy Statement applies to our Practice's website and governs our data collection and usage practices. By using this website, you consent to the data practices described in this Privacy Statement.</p>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Collection of your Personal Information</h2>
+            <div class="space-y-4">
+              <p>This Practice collects personally identifiable information provided by you, such as your e-mail address, name, home or work address or telephone number. This Practice also collects anonymous demographic information, which is not unique to you, such as your ZIP code, age, gender, preferences, interests and favorites.</p>
+              
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="font-semibold mb-3">Automatically Collected Information</h3>
+                <p>Information about your computer hardware and software is automatically collected by this website. This information can include:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>Your IP address</li>
+                  <li>Browser type</li>
+                  <li>Domain names</li>
+                  <li>Access times</li>
+                  <li>Referring website addresses</li>
+                </ul>
+              </div>
+
+              <p class="text-sm bg-primary/5 p-4 rounded-lg">Please keep in mind that if you directly disclose personally identifiable information or personally sensitive data through public message boards, this information may be collected and used by others.</p>
+            </div>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Use of your Personal Information</h2>
+            <div class="space-y-4">
+              <p>This Practice collects and uses your personal information to:</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Operate the website and deliver the services you have requested</li>
+                <li>Inform you of other products or services available from this Practice and its affiliates</li>
+                <li>Conduct research through surveys about your opinion of current services or potential new services</li>
+              </ul>
+
+              <div class="bg-gray-50 p-6 rounded-lg mt-4">
+                <h3 class="font-semibold mb-3">Important Privacy Commitments</h3>
+                <ul class="space-y-2">
+                  <li>✓ We do not sell, rent or lease customer lists to third parties</li>
+                  <li>✓ Trusted partners must maintain confidentiality of your information</li>
+                  <li>✓ Sensitive personal information is not used without explicit consent</li>
+                  <li>✓ Personal information is only disclosed if required by law</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Use of Cookies</h2>
+            <p>The website uses "cookies" to help this Practice personalize your online experience. A cookie is a text file that is placed on your hard disk by a webpage server. Cookies cannot be used to run programs or deliver viruses to your computer. Cookies are uniquely assigned to you, and can only be read by a web server in the domain that issued the cookie to you.</p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Security of your Personal Information</h2>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>This Practice secures your personal information from unauthorized access, use or disclosure. This Practice secures the personally identifiable information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use or disclosure.</p>
+              <p class="mt-4">When personal information (such as a credit card number) is transmitted to other websites, it is protected through the use of encryption, such as the Secure Socket Layer (SSL) protocol.</p>
+            </div>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Changes to this Statement</h2>
+            <p>This Practice will occasionally update this Privacy Statement to reflect company and customer feedback. We encourage you to periodically review this Privacy Statement to be informed of how this Practice is protecting your information.</p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
+            <p>Please contact us:</p>
+            <ul class="list-none space-y-2 mt-2">
+              <li><strong>Phone:</strong> 301-750-9771</li>
+              <li><strong>Mail:</strong> 1328 Southern Ave SE, Suite 205, Washington, DC 20032</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .prose p {
+    @apply text-gray-600 mb-4;
+  }
+  .prose {
+    @apply space-y-4;
+  }
+  .prose ul {
+    @apply text-gray-600;
+  }
+  .prose h2 {
+    @apply text-gray-800;
+  }
+</style>
