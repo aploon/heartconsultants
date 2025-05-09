@@ -16,13 +16,15 @@ const defaultPreferences: CookiePreferences = {
 
 export function useCookieConsent() {
   const [preferences, setPreferences] = useState<CookiePreferences>(defaultPreferences);
-  const [hasConsented, setHasConsented] = useState<boolean>(false);
+  const [hasConsented, setHasConsented] = useState<boolean>(true);
 
   useEffect(() => {
     const savedPreferences = localStorage.getItem('cookiePreferences');
     if (savedPreferences) {
       setPreferences(JSON.parse(savedPreferences));
       setHasConsented(true);
+    }else{
+      setHasConsented(false);
     }
   }, []);
 

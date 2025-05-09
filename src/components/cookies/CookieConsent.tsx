@@ -7,10 +7,6 @@ export const CookieConsent: React.FC = () => {
   const [showDetails, setShowDetails] = useState(false);
   const [tempPreferences, setTempPreferences] = useState<CookiePreferences>(preferences);
 
-  if (hasConsented) {
-    return null;
-  }
-
   const handleAcceptAll = () => {
     updatePreferences({
       essential: true,
@@ -41,6 +37,7 @@ export const CookieConsent: React.FC = () => {
   };
 
   return (
+    !hasConsented &&
     <div className="fixed bottom-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/95 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-300">
       <div className="max-w-7xl mx-auto p-6">
         <div className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
@@ -160,5 +157,5 @@ export const CookieConsent: React.FC = () => {
         )}
       </div>
     </div>
-  );
+  )
 }; 
