@@ -1,0 +1,60 @@
+---
+import doctorImage from '../assets/doctor.jpg';
+
+const specialties = [
+  "Hypertension",
+  "Cardiac Arrhythmias",
+  "Heart Valve Disorders",
+  "Coronary Heart Disease",
+  "Cardiomyopathy",
+  "Heart Failure"
+];
+---
+
+<section id="about" class="py-20 bg-white">
+  <div class="container mx-auto px-5 md:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="relative">
+        <img 
+          src={doctorImage.src} 
+          alt="Dr. Luc Oke" 
+          class="rounded-lg shadow-2xl w-full object-cover h-[500px]"
+        />
+        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl max-w-sm">
+          <p class="text-[#1a355e] font-semibold text-lg">Dr. Luc Oke, MD</p>
+          <p class="text-gray-600">Board-certified Cardiologist</p>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-4xl font-bold text-[#1a355e] mb-4">Expert Cardiac Care</h2>
+          <p class="text-xl text-gray-600 leading-relaxed mb-6">
+            At Heart Consultants, we combine advanced diagnostic and treatment options with the highest standard of care in Silver Spring, MD and Washington, DC.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          {specialties.map(specialty => (
+            <div class="flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#b71c1c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">{specialty}</span>
+            </div>
+          ))}
+        </div>
+
+        <a 
+          href="#services" 
+          class="inline-flex items-center bg-[#1a355e] text-white px-8 py-3 rounded-full hover:bg-[#142844] transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+          Discover Our Services
+        </a>
+      </div>
+    </div>
+  </div>
+</section> 
