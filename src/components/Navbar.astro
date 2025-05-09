@@ -1,9 +1,10 @@
 ---
 import logo from '../assets/logo.png';
+import { contactInfo } from '../config/contact';
 ---
 
 
-<header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+<header class="fixed w-full bg-white/90 backdrop-blur-sm z-40 shadow-sm top-8 transition-all duration-300">
   <nav class="container mx-auto px-5 md:px-8 py-2">
     <div class="flex items-center justify-between">
       <div class="flex items-center">
@@ -16,8 +17,8 @@ import logo from '../assets/logo.png';
         <a href="#about" class="text-gray-700 hover:text-[#b71c1c] transition-colors">About Us</a>
         <a href="#services" class="text-gray-700 hover:text-[#b71c1c] transition-colors">Our Services</a>
         <a href="#contact" class="text-gray-700 hover:text-[#b71c1c] transition-colors">Contact</a>
-        <a href="tel:301-500-3055" class="bg-[#b71c1c] text-white px-6 py-2 rounded-full hover:bg-[#951616] transition-colors">
-          Call Us
+        <a href={`tel:${contactInfo.locations.dc.phone.appointments}`} class="bg-[#b71c1c] text-white px-6 py-2 rounded-full hover:bg-[#951616] transition-colors">
+          Schedule Now
         </a>
       </div>
 
@@ -35,8 +36,8 @@ import logo from '../assets/logo.png';
       <a href="#about" class="block text-gray-700 hover:text-[#b71c1c]">About Us</a>
       <a href="#services" class="block text-gray-700 hover:text-[#b71c1c]">Our Services</a>
       <a href="#contact" class="block text-gray-700 hover:text-[#b71c1c]">Contact</a>
-      <a href="tel:301-500-3055" class="block bg-[#b71c1c] text-white px-6 py-2 rounded-full text-center">
-        Call Us
+      <a href={`tel:${contactInfo.locations.dc.phone.appointments}`} class="block bg-[#b71c1c] text-white px-6 py-2 rounded-full text-center">
+        Schedule Now
       </a>
     </div>
   </div>

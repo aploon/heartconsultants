@@ -1,0 +1,121 @@
+---
+import doctorImage from "../assets/doctor.jpg";
+---
+
+<section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="container mx-auto px-5 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="space-y-12">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold text-[#1a355e] mb-6">
+                        Expert Cardiology Team
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        The expert cardiology team at Heart Consultants provides
+                        advanced diagnostic and treatment options combined with
+                        the highest standard of care to promote heart health and
+                        wellness. The practice has locations in Silver Spring,
+                        Maryland, and Washington, DC, where their cardiologists
+                        perform various procedures to diagnose and treat
+                        cardiovascular disease.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-[#1a355e] mb-4">
+                            Leadership & Expertise
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Board-certified cardiologist Luc Oke, MD, leads the team
+                            at Heart Consultants, helping patients suffering from a
+                            broad range of heart health problems, including:
+                        </p>
+                        <ul class="grid grid-cols-1 gap-3">
+                            {
+                                [
+                                    "Hypertension (high blood pressure)",
+                                    "Lipid disorders (high cholesterol)",
+                                    "Chest pain",
+                                    "Cardiac arrhythmias",
+                                    "Heart valve disorders",
+                                    "Cardiomyopathy",
+                                    "Congestive heart failure",
+                                    "Coronary heart disease",
+                                    "Peripheral artery disease",
+                                ].map((condition) => (
+                                    <li class="flex items-start space-x-3">
+                                        <svg
+                                            class="h-6 w-6 text-[#b71c1c] flex-shrink-0"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                            />
+                                        </svg>
+                                        <span class="text-gray-600">
+                                            {condition}
+                                        </span>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold text-[#1a355e] mb-4">
+                            Comprehensive Care Approach
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            The Heart Consultants team helps patients understand how
+                            certain risk factors affect their heart health,
+                            including:
+                        </p>
+                        <ul class="grid grid-cols-1 gap-3 mb-8">
+                            {
+                                [
+                                    "Smoking",
+                                    "Poor diet",
+                                    "Stress",
+                                    "Inactivity", 
+                                    "Sleep deprivation",
+                                    "High cholesterol",
+                                ].map((factor) => (
+                                    <li class="flex items-center space-x-3">
+                                        <svg
+                                            class="h-5 w-5 text-[#b71c1c]"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                                            />
+                                        </svg>
+                                        <span class="text-gray-600">{factor}</span>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        <p class="text-gray-600 leading-relaxed">
+                            Treating a patient with a heart condition takes more
+                            than a prescription or medical procedure, often
+                            requiring a change in lifestyle. The team works closely
+                            with patients to develop a personalized care plan that
+                            best meets their needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

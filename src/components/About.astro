@@ -14,7 +14,7 @@ const specialties = [
 <section id="about" class="py-20 bg-white">
   <div class="container mx-auto px-5 md:px-8">
     <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="relative">
+      <!-- <div class="relative">
         <img 
           src={doctorImage.src} 
           alt="Dr. Luc Oke" 
@@ -24,13 +24,47 @@ const specialties = [
           <p class="text-[#1a355e] font-semibold text-lg">Dr. Luc Oke, MD</p>
           <p class="text-gray-600">Board-certified Cardiologist</p>
         </div>
+      </div> -->
+
+      <div class="relative">
+        <div class="sticky top-24">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={doctorImage.src} 
+              alt="Dr. Luc Oke" 
+              class="w-full h-[600px] object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a355e]/90 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <h3 class="text-3xl font-bold mb-2">Dr. Luc Oke, MD</h3>
+              <p class="text-xl opacity-90">Board-certified Cardiologist</p>
+              <div class="mt-4 flex gap-4">
+                <a href="#contact" class="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-2 rounded-full hover:bg-white/20 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Contact
+                </a>
+                <a href="#services" class="inline-flex items-center bg-[#b71c1c] px-6 py-2 rounded-full hover:bg-[#951616] transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                  Our Services
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="space-y-8">
         <div>
           <h2 class="text-4xl font-bold text-[#1a355e] mb-4">Expert Cardiac Care</h2>
           <p class="text-xl text-gray-600 leading-relaxed mb-6">
-            At Heart Consultants, we combine advanced diagnostic and treatment options with the highest standard of care in Silver Spring, MD and Washington, DC.
+            At Heart Consultants, we combine advanced diagnostic and treatment options with the highest standard of care in Silver Spring, MD and Washington, DC. Our board-certified cardiologists are committed to providing personalized treatment plans using the latest technologies and evidence-based practices.
+          </p>
+          <p class="text-xl text-gray-600 leading-relaxed mb-6">
+            We take pride in offering comprehensive cardiovascular care, from preventive screenings to complex cardiac procedures, all while ensuring our patients receive compassionate attention and clear communication about their heart health journey.
           </p>
         </div>
 

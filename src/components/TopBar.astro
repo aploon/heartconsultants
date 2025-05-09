@@ -1,0 +1,50 @@
+<div id="topBar" class="bg-[#b71c1c] text-white py-2 relative z-50">
+  <div class="container mx-auto px-5 md:px-8">
+    <div class="flex items-center justify-center text-center">
+      <div class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <p class="text-sm md:text-base">
+          <span class="font-semibold">Coming Soon:</span> 
+          We're getting a new look! Stay tuned for our enhanced website experience
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const topBar = document.getElementById('topBar');
+  const navbar = document.querySelector('header');
+  let topBarHeight = topBar?.offsetHeight || 0;
+  let lastScroll = 0;
+
+  function updateNavbarPosition() {
+    const currentScroll = window.scrollY;
+    
+    if (currentScroll <= topBarHeight) {
+      // Au début du scroll, la navbar est sous la topbar
+      navbar?.classList.remove('top-0');
+      navbar?.classList.add('top-8');
+    } else {
+      // Après avoir dépassé la topbar, la navbar monte en haut
+      navbar?.classList.remove('top-8');
+      navbar?.classList.add('top-0');
+    }
+    
+    lastScroll = currentScroll;
+  }
+
+  // Mettre à jour la position initiale
+  updateNavbarPosition();
+
+  // Mettre à jour lors du scroll
+  window.addEventListener('scroll', updateNavbarPosition);
+  
+  // Mettre à jour si la taille de la fenêtre change
+  window.addEventListener('resize', () => {
+    topBarHeight = topBar?.offsetHeight || 0;
+    updateNavbarPosition();
+  });
+</script> 
