@@ -41,7 +41,7 @@ const socialLinks = [
   }
 ];
 
-const locations = [contactInfo.locations.dc, contactInfo.locations.silverSpring];
+const locations = [contactInfo.locations.silverSpring];
 ---
 
 <footer class="bg-[#1a355e] text-white pt-12 pb-6">
@@ -51,7 +51,7 @@ const locations = [contactInfo.locations.dc, contactInfo.locations.silverSpring]
       <div class="space-y-4">
         <img src={logo.src} alt="Heart Consultants" class="h-16 brightness-0 invert" />
         <p class="text-gray-300 text-sm">
-          Providing exceptional cardiac care with advanced diagnostic and treatment options in Silver Spring, MD and Washington, DC.
+          Providing exceptional cardiac care with advanced diagnostic and treatment options in Silver Spring, MD.
         </p>
         
         <!-- Social Links -->
@@ -86,7 +86,7 @@ const locations = [contactInfo.locations.dc, contactInfo.locations.silverSpring]
 
       <!-- Locations -->
       <div class="md:col-span-2">
-        <h3 class="text-lg font-semibold mb-4">Our Locations</h3>
+        <h3 class="text-lg font-semibold mb-4">Our Location</h3>
         <div class="grid md:grid-cols-2 gap-6">
           {locations.map(location => (
             <div>
@@ -127,8 +127,8 @@ const locations = [contactInfo.locations.dc, contactInfo.locations.silverSpring]
           ))}
         </div>
         <div class="flex items-center justify-start md:justify-end space-x-4">
-          <a href={`tel:${contactInfo.locations.dc.phone.general}`} class="text-sm text-gray-400 hover:text-white transition-colors">
-            {contactInfo.locations.dc.phone.general}
+          <a href={`tel:${contactInfo.locations.silverSpring.phone.general}`} class="text-sm text-gray-400 hover:text-white transition-colors">
+            {contactInfo.locations.silverSpring.phone.general}
           </a>
           <span class="text-gray-600">|</span>
           <a href={`mailto:${contactInfo.email}`} class="text-sm text-gray-400 hover:text-white transition-colors">
