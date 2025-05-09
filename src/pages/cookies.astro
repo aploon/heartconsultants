@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CookieManager } from '../components/cookies/CookieManager';
+import logo from '../assets/logo.png';
+---
+
+<Layout title="Gestion des Cookies - Heart Consultants">
+  <main class="py-12">
+    <div class="container mx-auto px-5 md:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+          <a href="/">
+            <img src={logo.src} alt="Heart Consultants Logo" class="h-16 w-auto" />
+          </a>
+        </div>
+        
+        <h1 class="text-3xl font-bold">Cookie Policy</h1>
+        <div class="space-y-8">
+          <!-- Introduction -->
+          <section>
+            <h2 class="text-xl font-semibold mb-4 text-primary">1. What is a cookie?</h2>
+            <div class="prose">
+              <p>A cookie is a small text file placed on your device (computer, tablet, mobile) during your visit to our website. It allows us to store information about your navigation and provide you with a personalized experience.</p>
+            </div>
+          </section>
+
+          <!-- Types de cookies -->
+          <section>
+            <h2 class="text-xl font-semibold mb-4 text-primary">2. The cookies we use</h2>
+            <div class="prose">
+              <CookieManager client:load />
+            </div>
+          </section>
+
+          <!-- Durée de conservation -->
+          <section>
+            <h2 class="text-xl font-semibold mb-4 text-primary">3. Cookie Duration</h2>
+            <div class="prose">
+              <p>Cookies have a variable lifespan:</p>
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Session cookies: deleted at the end of the browser session</li>
+                <li>Persistent cookies: up to 13 months maximum</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Gestion des cookies -->
+          <section>
+            <h2 class="text-xl font-semibold mb-4 text-primary">4. How to manage your cookies?</h2>
+            <div class="prose">
+              <p>You can at any time modify your preferences:</p>
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Via the configuration panel above</li>
+                <li>By deleting the cookies via your browser</li>
+                <li>By setting your browser to refuse cookies</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Impact -->
+          <section>
+            <h2 class="text-xl font-semibold mb-4 text-primary">5. Impact of refusing cookies</h2>
+            <div class="prose">
+              <p>Refusing certain cookies may impact your experience on the site:</p>
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Limited features</li>
+                <li>Non-personalized content</li>
+                <li>Reduced performance</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Plus d'informations -->
+          <section>
+            <h2 class="text-xl font-semibold mb-4 text-primary">6. More information</h2>
+            <div class="prose">
+              <p>For more information on cookies and your rights, you can consult:</p>
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Our <a href="/privacy" class="text-primary hover:text-primary/80">privacy policy</a></li>
+                <li>The CNIL website (Commission Nationale de l'Informatique et des Libertés)</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- Date de mise à jour -->
+        <div class="mt-12 text-sm text-gray-600">
+          <p>Last update: 15 March 2024</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .prose p {
+    @apply text-gray-600 mb-4;
+  }
+  .prose {
+    @apply space-y-4;
+  }
+  .prose ul {
+    @apply text-gray-600;
+  }
+</style>
