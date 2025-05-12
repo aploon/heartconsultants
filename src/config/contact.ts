@@ -1,7 +1,7 @@
 export const contactInfo = {
   locations: {
     silverSpring: {
-      name: "Heart Consultants, Silver Spring, MD",
+      name: "Heart Consultants, LLC",
       address: {
         street: "8630 Fenton Street",
         suite: "Suite 720",
@@ -10,10 +10,9 @@ export const contactInfo = {
         zip: "20910"
       },
       phone: {
-        appointments: "301-750-9773",
         general: "301-500-3055"
       }
     }
   },
-  email: "info@heartconsultants.com"
+  email: "info@heartconsultants.org"
 }; 
